@@ -1,1 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4F1EA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-label="monitor"><rect x="2" y="3" width="20" height="15" rx="2"/><path d="M12 18v4m-5 0h10"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Apex monitor" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#E8F5F4" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 13.7 12 9h24l4 4.7v19.1l-4.3 3.8H12.2L8 32.8V13.7Z"/><path d="M13 14h19" stroke="#7DDFDA" stroke-width="2.4"/><path d="M24 36.6v5.3m-8.5 0h17"/><path d="m33 14 2.4 2.5v11.8" stroke="#8AA7B0" stroke-width="1.7"/><path d="M11.8 28.6v3.1h4" stroke="#7DDFDA" stroke-width="2.3"/>
+</svg>
