@@ -4,21 +4,22 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="color-scheme" content="dark"/>
-<title>APEX OS — Titanium / Aurora Design Concept</title>
+<title>APEX OS — Native Shell V3 | Desktop Preview</title>
 <link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="shell.css"/>
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'"/>
 </head>
 <body>
 <div class="product-shell">
   <header class="system-header">
-    <div class="brand"><span class="mark">A<span class="mark-cut"></span></span><div class="brand-copy"><strong>APEX<span class="sys">/OS</span></strong><span>SYSTEM PREVIEW <b>V2.0</b></span></div></div>
+    <div class="brand" role="button" tabindex="0" aria-label="Open Apex launcher" data-launcher-toggle><span class="mark">A<span class="mark-cut"></span></span><div class="brand-copy"><strong>APEX<span class="sys">/OS</span></strong><span>SYSTEM PREVIEW <b>V2.0</b></span></div></div>
     <div class="header-divider"></div>
     <div class="header-descriptor"><span class="online-dot"></span><span>PRIMARY WORKSPACE</span><span class="unit-id">/ 001</span></div>
     <div class="header-search"><img src="icons/search.svg" alt=""/><span>Search applications, games, settings</span><kbd>⌘ K</kbd></div>
     <div class="header-icons">
-      <button aria-label="Network details" class="icon-btn" title="Network"><img src="icons/wifi.svg" alt=""/></button>
-      <button aria-label="Audio settings" class="icon-btn" title="Audio"><img src="icons/volume.svg" alt=""/></button>
-      <button aria-label="Battery and power" class="battery-pill" data-open="battery"><img src="icons/battery-charge.svg" alt=""/><span>78%</span><i></i></button>
+      <button aria-label="Network details" class="icon-btn" title="Network & Quick Settings" data-panel="quick"><img src="icons/wifi.svg" alt=""/></button>
+      <button aria-label="Audio settings" class="icon-btn" title="Audio & Quick Settings" data-panel="quick"><img src="icons/volume.svg" alt=""/></button>
+      <button aria-label="Battery and power" class="battery-pill" data-panel="quick"><img src="icons/battery-charge.svg" alt=""/><span>78%</span><i></i></button>
       <time>09:41 <small>THU / 19 NOV</small></time>
     </div>
   </header>
@@ -38,9 +39,15 @@
     <section id="screen-desktop" class="screen show" aria-label="Apex desktop">
       <div class="desktop-scene"><div class="scene-glow"></div><div class="perspective-grid"></div><div class="horizon"></div><div class="scene-wordmark">A<span>PEX</span></div></div>
       <div class="desktop-topline"><span><i class="crosshair"></i> WORKSPACE 01 <em>/</em> DESKTOP</span><span>FOCUS MODE <b>READY</b></span></div>
-      <div class="desktop-content">
-        <div class="desktop-headline"><div class="eyebrow">YOUR MACHINE. FULL CONTROL.</div><h1>More power.<br/><span>Less friction.</span></h1><p>Everything important, a glance away. Everything else, out of the way.</p><div class="desktop-actions"><button class="button primary" data-screen="library">OPEN GAME HUB <span>↗</span></button><button class="button secondary" data-screen="command">COMMAND CENTER <span>→</span></button></div></div>
-        <div class="float-panel glass"><div class="panel-top"><div class="eyebrow">SYSTEM / SNAPSHOT</div><span class="live-dot"><b></b> DEMO DATA</span></div><div class="big-stat"><span>PERFORMANCE PROFILE</span><strong id="profile-output">BALANCED</strong></div><div class="panel-split"><div><span>GPU LOAD</span><strong>36<small>%</small></strong><div class="tiny-bar"><i style="width:36%"></i></div></div><div><span>CPU TEMP</span><strong>64<small>°C</small></strong><div class="tiny-bar"><i style="width:64%"></i></div></div></div><div class="panel-footer"><span>ALL SYSTEMS NORMAL</span><span class="green">● STABLE</span></div></div>
+      <div class="desktop-content native-desktop-content">
+        <div class="desktop-shortcuts" role="group" aria-label="Desktop shortcuts">
+          <button class="desktop-shortcut" data-screen="files"><span class="shortcut-icon"><img src="icons/folder.svg" alt=""/></span><span>Home</span></button>
+          <button class="desktop-shortcut" data-screen="library"><span class="shortcut-icon"><img src="icons/gamepad.svg" alt=""/></span><span>Game Library</span></button>
+          <button class="desktop-shortcut" data-screen="tasks"><span class="shortcut-icon"><img src="icons/cpu.svg" alt=""/></span><span>Task Manager</span></button>
+          <button class="desktop-shortcut" data-screen="settings"><span class="shortcut-icon"><img src="icons/settings.svg" alt=""/></span><span>Settings</span></button>
+        </div>
+        <div class="desktop-signature" aria-hidden="true"><span class="signature-top">A P E X  /  S Y S T E M  0 1</span><div>APEX<span>.</span></div><span class="signature-bottom">PRECISION IN MOTION</span></div>
+        <button class="desktop-status" data-screen="command"><span class="status-pulse"></span><span><strong>BALANCED</strong><small>Hardware profile · demo</small></span><span class="status-chevron">↗</span></button>
       </div>
       <div class="desktop-edge"><span>APEX IS READY WHEN YOU ARE</span><span>REVISION / TITANIUM-AURORA / CONCEPT</span></div>
     </section>
@@ -123,10 +130,54 @@
       <div class="installer-workflow"><div class="install-head"><span>APEX SETUP <b>/ V2</b></span><span><i class="online-dot"></i> LIVE ENVIRONMENT</span></div><div class="install-progress"><div class="step active" data-step="0"><span>01</span>WELCOME</div><div class="step" data-step="1"><span>02</span>STORAGE</div><div class="step" data-step="2"><span>03</span>SECURITY</div><div class="step" data-step="3"><span>04</span>REVIEW</div></div><div id="install-step-content"></div><div class="install-actionbar"><button class="button secondary" id="install-back">← BACK</button><span class="install-privacy">YOUR DATA STAYS YOURS</span><button class="button primary" id="install-next">CONTINUE →</button></div></div></div>
     </section>
   </main>
-  <footer class="bottom-dock"><div class="dock-left"><span class="focus-marker">◉</span> <b>APEX</b> <span class="dock-divider"></span><span>WORKSPACE 01</span></div><div class="dock-links"><button data-screen="desktop">DESKTOP</button><button data-screen="library">GAME HUB</button><button data-screen="command">COMMAND</button><button data-screen="tasks">TASK MANAGER</button><button data-screen="files">FILES</button><button data-screen="settings">SETTINGS</button><button data-screen="installer">INSTALLER</button></div><div class="dock-right"><span>PRE-ALPHA CONCEPT</span><b>V2.0</b></div></footer>
+  <footer class="bottom-dock" aria-label="Apex OS application dock">
+    <div class="dock-links">
+      <button class="dock-apex" data-launcher-toggle title="Open Apex Launcher" aria-label="Open Apex Launcher"><img src="icons/apex.svg" alt=""/></button>
+      <span class="dock-separator"></span>
+      <button data-screen="desktop" title="Desktop" aria-label="Show Desktop"><img src="icons/monitor.svg" alt=""/><span>Desktop</span></button>
+      <button data-screen="library" title="Game Hub" aria-label="Open Game Hub"><img src="icons/gamepad.svg" alt=""/><span>Games</span></button>
+      <button data-screen="files" title="Apex Files" aria-label="Open File Manager"><img src="icons/folder.svg" alt=""/><span>Files</span></button>
+      <button data-screen="settings" title="Apex Settings" aria-label="Open Settings"><img src="icons/settings.svg" alt=""/><span>Settings</span></button>
+      <button data-screen="tasks" title="Task Manager" aria-label="Open Task Manager"><img src="icons/cpu.svg" alt=""/><span>Tasks</span></button>
+      <button data-screen="command" title="Command Center" aria-label="Open Command Center"><img src="icons/gpu.svg" alt=""/><span>Command</span></button>
+      <span class="dock-separator"></span>
+      <button data-panel="quick" title="Quick Settings" aria-label="Open Quick Settings"><img src="icons/wifi.svg" alt=""/><span>Controls</span></button>
+    </div>
+  </footer>
+  <div id="apex-launcher" class="shell-panel launcher-panel" role="dialog" aria-label="Apex application launcher" hidden>
+    <div class="panel-heading"><span class="panel-eyebrow">APEX / APPLICATIONS</span><button class="panel-close" data-dismiss-panels aria-label="Close launcher">×</button></div>
+    <div class="launcher-title">All your tools.<br/><em>One command.</em></div>
+    <label class="shell-search"><img src="icons/search.svg" alt=""/><input id="shell-launcher-search" type="search" aria-label="Search applications" placeholder="Search apps and settings…" autocomplete="off"/><kbd>Ctrl K</kbd></label>
+    <div class="launcher-caption">PINNED APPLICATIONS</div>
+    <div id="launcher-grid" class="launcher-app-grid">
+      <button data-screen="library"><img src="icons/gamepad.svg" alt=""/><span>Game Hub</span></button>
+      <button data-screen="files"><img src="icons/folder.svg" alt=""/><span>Files</span></button>
+      <button data-screen="settings"><img src="icons/settings.svg" alt=""/><span>Settings</span></button>
+      <button data-screen="tasks"><img src="icons/cpu.svg" alt=""/><span>Task Manager</span></button>
+      <button data-screen="command"><img src="icons/gpu.svg" alt=""/><span>Command</span></button>
+      <button data-screen="installer"><img src="icons/download.svg" alt=""/><span>Installer</span></button>
+    </div>
+    <div class="launcher-footer">LOCAL DESKTOP PREVIEW <span>↑↓ navigate · Esc close</span></div>
+  </div>
+  <div id="apex-quick" class="shell-panel quick-panel" role="dialog" aria-label="System quick settings" hidden>
+    <div class="panel-heading"><span class="panel-eyebrow">SYSTEM / QUICK CONTROLS</span><button class="panel-close" data-dismiss-panels aria-label="Close quick settings">×</button></div>
+    <div class="quick-title">Ready to play <span class="live-indicator">● DEMO</span></div>
+    <div class="quick-tile-grid">
+      <button class="quick-tile is-on" data-demo-switch="wifi" aria-pressed="true"><img src="icons/wifi.svg" alt=""/><strong>Wi-Fi</strong><small>Connected (demo)</small></button>
+      <button class="quick-tile is-on" data-demo-switch="bluetooth" aria-pressed="true"><img src="icons/bluetooth.svg" alt=""/><strong>Bluetooth</strong><small>Enabled (demo)</small></button>
+      <button class="quick-tile" data-demo-switch="nightlight" aria-pressed="false"><img src="icons/sun-moon.svg" alt=""/><strong>Night Light</strong><small>Off (demo)</small></button>
+      <button class="quick-tile" data-demo-switch="dnd" aria-pressed="false"><img src="icons/dnd.svg" alt=""/><strong>Focus</strong><small>Off (demo)</small></button>
+    </div>
+    <label class="quick-range"><span><img src="icons/brightness.svg" alt=""/> Brightness</span><input type="range" min="0" max="100" value="72" aria-label="Preview brightness"/><output>72%</output></label>
+    <label class="quick-range"><span><img src="icons/volume.svg" alt=""/> Volume</span><input type="range" min="0" max="100" value="54" aria-label="Preview volume"/><output>54%</output></label>
+    <button class="quick-battery" data-open="battery"><img src="icons/battery-health.svg" alt=""/><span><strong>Battery · 78%</strong><small>Battery health: example only</small></span><b>VIEW →</b></button>
+    <div class="quick-foot">All controls are visual demonstration only.</div>
+  </div>
+  <div id="shell-backdrop" class="shell-backdrop" hidden></div>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <div class="modal-backdrop" id="modal" hidden><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="eyebrow">APEX / SYSTEM MESSAGE</div><h3 id="modal-title">Preview mode</h3><p id="modal-body"></p><button class="button primary" id="modal-close">CLOSE</button></div></div>
 <script src="app.js"></script>
+<script src="shell.js"></script>
 </body>
 </html>
