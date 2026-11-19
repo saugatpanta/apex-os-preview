@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="color-scheme" content="dark"/>
+<title>APEX OS — Titanium / Aurora Design Concept</title>
+<link rel="stylesheet" href="styles.css"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'"/>
+</head>
+<body>
+<div class="product-shell">
+  <header class="system-header">
+    <div class="brand"><span class="mark">A<span class="mark-cut"></span></span><div class="brand-copy"><strong>APEX<span class="sys">/OS</span></strong><span>SYSTEM PREVIEW <b>V2.0</b></span></div></div>
+    <div class="header-divider"></div>
+    <div class="header-descriptor"><span class="online-dot"></span><span>PRIMARY WORKSPACE</span><span class="unit-id">/ 001</span></div>
+    <div class="header-search"><img src="icons/search.svg" alt=""/><span>Search applications, games, settings</span><kbd>⌘ K</kbd></div>
+    <div class="header-icons">
+      <button aria-label="Network details" class="icon-btn" title="Network"><img src="icons/wifi.svg" alt=""/></button>
+      <button aria-label="Audio settings" class="icon-btn" title="Audio"><img src="icons/volume.svg" alt=""/></button>
+      <button aria-label="Battery and power" class="battery-pill" data-open="battery"><img src="icons/battery-charge.svg" alt=""/><span>78%</span><i></i></button>
+      <time>09:41 <small>THU / 19 NOV</small></time>
+    </div>
+  </header>
+  <aside class="rail" aria-label="Main navigation">
+    <div class="rail-top"><div class="rail-caption">NAV</div>
+      <button class="rail-btn active" data-screen="desktop" title="Desktop" aria-label="Desktop"><span class="rail-line"></span><img src="icons/monitor.svg" alt=""/></button>
+      <button class="rail-btn" data-screen="library" title="Game Hub" aria-label="Game Hub"><span class="rail-line"></span><img src="icons/gamepad.svg" alt=""/></button>
+      <button class="rail-btn" data-screen="command" title="Command Center" aria-label="Command Center"><span class="rail-line"></span><img src="icons/gpu.svg" alt=""/></button>
+      <button class="rail-btn" data-screen="tasks" title="Apex Task Manager" aria-label="Apex Task Manager"><span class="rail-line"></span><img src="icons/cpu.svg" alt=""/></button>
+      <button class="rail-btn" data-screen="files" title="Apex File Manager" aria-label="Apex File Manager"><span class="rail-line"></span><img src="icons/folder.svg" alt=""/></button>
+      <button class="rail-btn" data-screen="settings" title="Apex Settings" aria-label="Apex Settings"><span class="rail-line"></span><img src="icons/settings.svg" alt=""/></button>
+      <button class="rail-btn" data-screen="installer" title="Installer" aria-label="Installer"><span class="rail-line"></span><img src="icons/download.svg" alt=""/></button>
+    </div>
+    <div class="rail-bottom"><button class="rail-btn" data-open="settings" title="Apex Settings"><img src="icons/settings.svg" alt=""/></button><button class="rail-btn power" data-open="power" title="Power controls (preview only)"><img src="icons/power.svg" alt=""/></button></div>
+  </aside>
+  <main id="app-main" class="main" aria-live="polite">
+    <section id="screen-desktop" class="screen show" aria-label="Apex desktop">
+      <div class="desktop-scene"><div class="scene-glow"></div><div class="perspective-grid"></div><div class="horizon"></div><div class="scene-wordmark">A<span>PEX</span></div></div>
+      <div class="desktop-topline"><span><i class="crosshair"></i> WORKSPACE 01 <em>/</em> DESKTOP</span><span>FOCUS MODE <b>READY</b></span></div>
+      <div class="desktop-content">
+        <div class="desktop-headline"><div class="eyebrow">YOUR MACHINE. FULL CONTROL.</div><h1>More power.<br/><span>Less friction.</span></h1><p>Everything important, a glance away. Everything else, out of the way.</p><div class="desktop-actions"><button class="button primary" data-screen="library">OPEN GAME HUB <span>↗</span></button><button class="button secondary" data-screen="command">COMMAND CENTER <span>→</span></button></div></div>
+        <div class="float-panel glass"><div class="panel-top"><div class="eyebrow">SYSTEM / SNAPSHOT</div><span class="live-dot"><b></b> DEMO DATA</span></div><div class="big-stat"><span>PERFORMANCE PROFILE</span><strong id="profile-output">BALANCED</strong></div><div class="panel-split"><div><span>GPU LOAD</span><strong>36<small>%</small></strong><div class="tiny-bar"><i style="width:36%"></i></div></div><div><span>CPU TEMP</span><strong>64<small>°C</small></strong><div class="tiny-bar"><i style="width:64%"></i></div></div></div><div class="panel-footer"><span>ALL SYSTEMS NORMAL</span><span class="green">● STABLE</span></div></div>
+      </div>
+      <div class="desktop-edge"><span>APEX IS READY WHEN YOU ARE</span><span>REVISION / TITANIUM-AURORA / CONCEPT</span></div>
+    </section>
+    <section id="screen-library" class="screen library-screen" aria-label="Game library">
+      <div class="content-pad"><div class="eyebrow c-accent">GAMING / UNIFIED LIBRARY</div><div class="section-title"><div><h2>Enter your universe<span class="sup">/01</span></h2><p>One home for your games. Built to disappear when you hit play.</p></div><div class="counter"><span>GAMES INDEXED</span><b>024</b><small>DEMO LIBRARY</small></div></div>
+      <div class="lib-filter"><button class="filter active" data-filter="all">ALL GAMES <b>24</b></button><button class="filter" data-filter="steam">STEAM</button><button class="filter" data-filter="epic">EPIC / GOG</button><button class="filter" data-filter="local">LOCAL .EXE</button><div class="filter-end">SORT: RECENTLY PLAYED <span>⌄</span></div></div>
+      <div class="hero-game"><div class="hero-art"></div><div class="hero-content"><div class="game-overline">FEATURED / INSTALLED <i>01</i></div><div class="genre">OPEN WORLD <em>·</em> EXPLORATION <em>·</em> PC</div><h3>ORBIT<br/>RUNNER</h3><p>An original fictional title, included solely to demonstrate the game-hub experience.</p><div class="hero-buttons"><button class="button primary" id="play-demo"><span class="play-triangle">▶</span> LAUNCH DEMO</button><button class="button transparent" id="details-demo">GAME DETAILS <span>↗</span></button></div></div><div class="hero-index">01 <span>/ 06 FEATURED</span></div></div>
+      <div class="lib-row-head"><h3>Continue exploring</h3><span>VIEW ALL <b>→</b></span></div><div class="game-grid"><button class="game-card" data-game="VOID CIRCUIT"><div class="game-cover void"><span class="cover-mark">V/</span></div><div class="game-meta"><strong>VOID CIRCUIT</strong><small>STEAM · INSTALLED</small></div><span class="game-state">PLAY →</span></button><button class="game-card" data-game="HALO DUST"><div class="game-cover halo"><span class="cover-mark">HD</span></div><div class="game-meta"><strong>HALO DUST</strong><small>EPIC · INSTALLED</small></div><span class="game-state">PLAY →</span></button><button class="game-card" data-game="NEON REMNANT"><div class="game-cover neon"><span class="cover-mark">NR</span></div><div class="game-meta"><strong>NEON REMNANT</strong><small>LOCAL · STATUS UNKNOWN</small></div><span class="game-state">DETAILS →</span></button></div>
+      </div>
+    </section>
+    <section id="screen-command" class="screen command-screen" aria-label="Hardware command center">
+      <div class="content-pad"><div class="eyebrow c-accent">HARDWARE / DEVICE CONTROL</div><div class="section-title"><div><h2>Command Center<span class="sup">/02</span></h2><p>Real machine intelligence. Designed around what your hardware actually supports.</p></div><div class="device-ident"><span>DEVICE PROFILE</span><strong>ACER PREDATOR</strong><small>EXAMPLE / CAPABILITY-GATED</small></div></div>
+      <div class="command-summary"><div class="hardware-tags"><span><i class="green-dot"></i> SYSTEM HEALTHY</span><span>HYBRID GRAPHICS</span><span>EXTERNAL POWER</span></div><div class="sample-ribbon">ILLUSTRATIVE TELEMETRY · NOT CONNECTED TO HARDWARE</div></div>
+      <div class="command-grid"><div class="command-main"><div class="dial-row"><div class="dial-card"><div class="dial-title">PROCESSOR <span>CPU / CORE</span></div><div class="dial cpu"><div><strong>64<sup>°</sup></strong><span>CELSIUS</span></div></div><div class="dial-bottom"><span>TEMPERATURE</span><b>NORMAL</b></div></div><div class="dial-card"><div class="dial-title">GRAPHICS <span>GPU / DISCRETE</span></div><div class="dial gpu"><div><strong>58<sup>°</sup></strong><span>CELSIUS</span></div></div><div class="dial-bottom"><span>THERMAL STATE</span><b>NORMAL</b></div></div><div class="dial-card"><div class="dial-title">SYSTEM FANS <span>EC / SENSORS</span></div><div class="dial fan"><div><strong>3.2<sup>K</sup></strong><span>RPM / DEMO</span></div></div><div class="dial-bottom"><span>FAN CONTROL</span><b>MODEL-GATED</b></div></div></div>
+      <div class="chart-panel"><div class="chart-head"><div><span class="eyebrow">PERFORMANCE / HISTORY</span><h4>Thermal activity</h4></div><span class="time-label">LAST 60 SECONDS · DEMO</span></div><svg viewBox="0 0 760 125" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="fadeChart" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#78dbc8" stop-opacity=".28"/><stop offset="1" stop-color="#78dbc8" stop-opacity="0"/></linearGradient></defs><path d="M0 105H760M0 67H760M0 30H760" stroke="#263943" stroke-dasharray="4 7"/><path d="M0 105L35 92 70 95 105 58 140 64 175 52 210 73 245 61 280 48 315 55 350 37 385 44 420 49 455 30 490 43 525 21 560 33 595 27 630 36 665 19 700 29 735 17 760 24 V125 H0Z" fill="url(#fadeChart)"/><path d="M0 105L35 92 70 95 105 58 140 64 175 52 210 73 245 61 280 48 315 55 350 37 385 44 420 49 455 30 490 43 525 21 560 33 595 27 630 36 665 19 700 29 735 17 760 24" fill="none" stroke="#79D7C7" stroke-width="2.5" stroke-linejoin="round"/></svg><div class="chart-legend"><span><b class="circle-cyan"></b> CPU TEMP</span><span><b class="circle-copper"></b> GPU TEMP</span><span>60 S</span></div></div></div>
+      <div class="command-side"><div class="profile-card"><div class="eyebrow">POWER / ACTIVE PROFILE</div><h4>Balanced<span>↗</span></h4><p>Adaptive performance and thermals for regular gaming.</p><div class="profiles" role="group" aria-label="Performance profile"><button class="profile" data-profile="quiet">QUIET</button><button class="profile active" data-profile="balanced">BALANCED</button><button class="profile" data-profile="performance">PERFORMANCE</button></div><div class="constraint"><span>HARDWARE PROFILE</span><b>PREVIEW ONLY</b></div></div><div class="battery-card"><div class="battery-title"><img src="icons/battery-health.svg" alt=""/><span>BATTERY SYSTEM</span><b>AC POWER</b></div><div class="battery-figures"><div><span>CHARGE</span><strong>78<small>%</small></strong></div><div><span>HEALTH</span><strong>92<small>%</small></strong></div></div><div class="battery-progress"><span style="width:78%"></span></div><div class="battery-bottom"><span>CONSERVATION LIMIT · 80%</span><button class="mini-switch on" aria-label="Toggle conservation limit" aria-pressed="true" id="charge-limit"><i></i></button></div><div class="note">Health, charge limits and fan modes are only shown when the device actually supports them.</div></div></div></div>
+      </div>
+    </section>
+
+    <section id="screen-tasks" class="screen tasks-screen" aria-label="Apex Task Manager">
+      <div class="content-pad">
+        <div class="eyebrow c-accent">SYSTEM / PROCESS INTELLIGENCE</div>
+        <div class="section-title"><div><h2>Apex Task Manager<span class="sup">/03</span></h2><p>Processes. Resource history. Startup control. An operating-system tool made by Apex.</p></div><div class="device-ident"><span>DATA SOURCE</span><strong>DEMONSTRATION</strong><small>NO PROCESS ACCESS IN PREVIEW</small></div></div>
+        <div class="tasks-metrics">
+          <article class="tasks-metric"><span>PROCESSOR <em>01</em></span><strong id="cpu-summary">24<small>%</small></strong><svg viewBox="0 0 170 48" aria-hidden="true"><path d="M0 32L14 29 27 34 40 17 56 24 70 12 83 25 96 18 110 27 123 13 139 17 153 9 170 19"/></svg><div>8 cores / 16 threads</div></article>
+          <article class="tasks-metric"><span>MEMORY <em>02</em></span><strong>9.6<small> / 32 GB</small></strong><div class="meter"><i style="width:30%"></i></div><div>30% in use · 22.4 GB available</div></article>
+          <article class="tasks-metric"><span>GRAPHICS <em>03</em></span><strong>36<small>%</small></strong><svg viewBox="0 0 170 48" aria-hidden="true"><path d="M0 39L18 37 32 24 48 34 64 16 78 14 94 27 107 17 124 24 144 11 158 15 170 10"/></svg><div>Vulkan / discrete GPU</div></article>
+          <article class="tasks-metric"><span>STORAGE <em>04</em></span><strong>1.2<small> GB/s</small></strong><div class="meter disk"><i style="width:46%"></i></div><div>Read 820 MB/s · Write 380 MB/s</div></article>
+        </div>
+        <div class="tasks-table-wrap"><div class="tasks-toolbar"><div><h3>Active processes</h3><p>Resource data shown here is synthetic.</p></div><div class="tasks-actions"><label class="mini-search"><img src="icons/search.svg" alt=""/><input id="process-query" placeholder="Find a process" aria-label="Find a process"/></label><select id="process-sort" aria-label="Sort processes"><option value="cpu">CPU usage</option><option value="memory">Memory usage</option><option value="name">Name</option></select><button id="end-process" class="button secondary danger-action" disabled>END TASK</button></div></div><div class="task-table-scroll"><table class="process-table"><thead><tr><th>PROCESS</th><th>STATUS</th><th>CPU</th><th>MEMORY</th><th>DISK</th><th>GPU</th></tr></thead><tbody id="process-body"></tbody></table></div><div class="table-foot"><span id="process-count">0 processes</span><span>VALUES ARE MOCK DATA · END TASK IS SIMULATED</span></div></div>
+        <div class="tasks-bottom"><div><span class="green-dot"></span> RESOURCE VIEW · SAFE PREVIEW</div><button data-open="startup">STARTUP APPS <span>↗</span></button><button data-open="task-details">PROCESS DETAILS <span>↗</span></button></div>
+      </div>
+    </section>
+    <section id="screen-files" class="screen files-screen" aria-label="Apex File Manager">
+      <div class="content-pad files-content">
+        <div class="eyebrow c-accent">SYSTEM / FILE NAVIGATION</div>
+        <div class="section-title"><div><h2>Apex Files<span class="sup">/04</span></h2><p>Move, organize, search and inspect files without a borrowed desktop app.</p></div><div class="device-ident"><span>DATA SOURCE</span><strong>SAMPLE FILESYSTEM</strong><small>READ-ONLY DESIGN PREVIEW</small></div></div>
+        <div class="file-manager"><aside class="file-sidebar"><div class="sidebar-section">FAVORITES</div><button class="place active" data-place="Home"><img src="icons/folder.svg" alt=""/> Home</button><button class="place" data-place="Desktop"><img src="icons/monitor.svg" alt=""/> Desktop</button><button class="place" data-place="Downloads"><img src="icons/download.svg" alt=""/> Downloads</button><button class="place" data-place="Documents"><img src="icons/folder.svg" alt=""/> Documents</button><button class="place" data-place="Pictures"><img src="icons/screenshot.svg" alt=""/> Pictures</button><div class="sidebar-section space-top">STORAGE</div><button class="place" data-place="Internal SSD"><img src="icons/driver.svg" alt=""/> Internal SSD</button><button class="place" data-place="Games"><img src="icons/gamepad.svg" alt=""/> Game Library</button><button class="place" data-place="Trash"><img src="icons/trash.svg" alt=""/> Trash</button><div class="storage-foot"><div><b>INTERNAL STORAGE</b><span>476 GB / 1 TB</span></div><div class="capacity"><i></i></div><small>Demo values. No disk is mounted.</small></div></aside>
+        <div class="file-main"><div class="file-toolbar"><button class="small-button" id="file-back" aria-label="Go back">←</button><button class="small-button" id="file-forward" aria-label="Go forward">→</button><div class="breadcrumb" id="file-breadcrumb">Home <span>/</span></div><label class="mini-search files-search"><img src="icons/search.svg" alt=""/><input id="file-query" aria-label="Search files" placeholder="Search files"/></label><button class="small-button active" id="file-grid-toggle" aria-label="Grid view">▦</button><button class="small-button" id="file-list-toggle" aria-label="List view">☷</button></div>
+          <div class="folder-heading"><div><div class="eyebrow">CURRENT LOCATION</div><h3 id="folder-title">Home</h3><p id="folder-subtitle">Your workspace and local content</p></div><div><button class="button secondary" id="new-folder">+ NEW FOLDER</button></div></div>
+          <div id="files-grid" class="files-grid" role="list"></div><div class="file-footer"><span id="file-selection-status">Select an item to see details</span><span>DEMONSTRATION FILES ONLY</span></div>
+        </div></div>
+      </div>
+    </section>
+    <section id="screen-settings" class="screen settings-screen" aria-label="Apex Settings">
+      <div class="content-pad settings-content">
+        <div class="eyebrow c-accent">SYSTEM / FIRST-PARTY CONTROL</div>
+        <div class="section-title"><div><h2>Apex Settings<span class="sup">/06</span></h2><p>One system. Every essential control. Built from the ground up for Apex Shell.</p></div><div class="device-ident"><span>DATA SOURCE</span><strong>DESIGN PROTOTYPE</strong><small>CHANGES ARE SIMULATED</small></div></div>
+        <div class="settings-layout">
+          <aside class="settings-side" aria-label="Settings categories">
+            <label class="mini-search settings-search"><img src="icons/search.svg" alt=""/><input id="settings-query" placeholder="Find a setting" aria-label="Search settings"/></label>
+            <div class="sidebar-section">YOUR SYSTEM</div>
+            <button class="settings-nav active" data-settings="overview"><img src="icons/monitor.svg" alt=""/> Overview <span>01</span></button>
+            <button class="settings-nav" data-settings="personalization"><img src="icons/sun-moon.svg" alt=""/> Personalization <span>02</span></button>
+            <button class="settings-nav" data-settings="display"><img src="icons/brightness.svg" alt=""/> Display & graphics <span>03</span></button>
+            <button class="settings-nav" data-settings="power"><img src="icons/battery-charge.svg" alt=""/> Power & battery <span>04</span></button>
+            <button class="settings-nav" data-settings="network"><img src="icons/wifi.svg" alt=""/> Network & Bluetooth <span>05</span></button>
+            <button class="settings-nav" data-settings="audio"><img src="icons/volume.svg" alt=""/> Sound & microphone <span>06</span></button>
+            <button class="settings-nav" data-settings="input"><img src="icons/keyboard.svg" alt=""/> Input & controllers <span>07</span></button>
+            <div class="sidebar-section space-top">CONTROL & TRUST</div>
+            <button class="settings-nav" data-settings="gaming"><img src="icons/gamepad.svg" alt=""/> Gaming <span>08</span></button>
+            <button class="settings-nav" data-settings="apps"><img src="icons/store.svg" alt=""/> Apps & defaults <span>09</span></button>
+            <button class="settings-nav" data-settings="storage"><img src="icons/driver.svg" alt=""/> Storage & disks <span>10</span></button>
+            <button class="settings-nav" data-settings="accounts"><img src="icons/user.svg" alt=""/> Accounts & sign-in <span>11</span></button>
+            <button class="settings-nav" data-settings="time"><img src="icons/clock.svg" alt=""/> Time & language <span>12</span></button>
+            <button class="settings-nav" data-settings="privacy"><img src="icons/shield.svg" alt=""/> Privacy & security <span>13</span></button>
+            <button class="settings-nav" data-settings="accessibility"><img src="icons/user.svg" alt=""/> Accessibility <span>14</span></button>
+            <button class="settings-nav" data-settings="developer"><img src="icons/terminal.svg" alt=""/> Developer tools <span>15</span></button>
+            <button class="settings-nav" data-settings="updates"><img src="icons/update.svg" alt=""/> Updates & recovery <span>16</span></button>
+          </aside>
+          <div class="settings-main" id="settings-main">
+            <div class="settings-topbar"><span id="settings-breadcrumb">APEX / SYSTEM / OVERVIEW</span><div><span class="offline-dot"></span> PREVIEW DATA <span class="topbar-index" id="settings-category-num">01 / 11</span></div></div>
+            <div id="settings-content" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="screen-installer" class="screen installer-screen" aria-label="Installation experience">
+      <div class="installer-grid"><div class="installer-cinematic"><div class="install-toplabel"><span>APEX SYSTEMS</span> <span>INSTALLATION ENVIRONMENT</span></div><div class="install-graphic"><div class="install-ring a"></div><div class="install-ring b"></div><div class="install-core"><span>A</span></div></div><div class="install-hero"><div class="eyebrow">BUILD YOUR FOUNDATION</div><h2>A new standard<br/><em>for play.</em></h2><p>Precision from first boot. A guided installation designed to respect your hardware and protect your data.</p></div><div class="install-bottomlabel">UEFI · X86_64 · GPU-AWARE LIVE SESSION</div></div>
+      <div class="installer-workflow"><div class="install-head"><span>APEX SETUP <b>/ V2</b></span><span><i class="online-dot"></i> LIVE ENVIRONMENT</span></div><div class="install-progress"><div class="step active" data-step="0"><span>01</span>WELCOME</div><div class="step" data-step="1"><span>02</span>STORAGE</div><div class="step" data-step="2"><span>03</span>SECURITY</div><div class="step" data-step="3"><span>04</span>REVIEW</div></div><div id="install-step-content"></div><div class="install-actionbar"><button class="button secondary" id="install-back">← BACK</button><span class="install-privacy">YOUR DATA STAYS YOURS</span><button class="button primary" id="install-next">CONTINUE →</button></div></div></div>
+    </section>
+  </main>
+  <footer class="bottom-dock"><div class="dock-left"><span class="focus-marker">◉</span> <b>APEX</b> <span class="dock-divider"></span><span>WORKSPACE 01</span></div><div class="dock-links"><button data-screen="desktop">DESKTOP</button><button data-screen="library">GAME HUB</button><button data-screen="command">COMMAND</button><button data-screen="tasks">TASK MANAGER</button><button data-screen="files">FILES</button><button data-screen="settings">SETTINGS</button><button data-screen="installer">INSTALLER</button></div><div class="dock-right"><span>PRE-ALPHA CONCEPT</span><b>V2.0</b></div></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal-backdrop" id="modal" hidden><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="eyebrow">APEX / SYSTEM MESSAGE</div><h3 id="modal-title">Preview mode</h3><p id="modal-body"></p><button class="button primary" id="modal-close">CLOSE</button></div></div>
+<script src="app.js"></script>
+</body>
+</html>
